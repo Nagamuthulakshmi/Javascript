@@ -1,0 +1,449 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript" src="message.js"></script>  
+    <script>
+        function myFunction() {
+        document.getElementById("idemo").innerHTML = "Paragraph changed.";
+        }
+
+        var hidden = false;
+    function action() {
+        hidden = !hidden;
+        if(hidden) {
+            document.getElementById('togglee').style.visibility = 'hidden';
+        } else {
+            document.getElementById('togglee').style.visibility = 'visible';
+        }
+    }
+
+    var hidden = false;
+    function actionHide() {
+        hidden = !hidden;
+        if(hidden) {
+            document.getElementById('hideButton').style.visibility = 'hidden';
+        } 
+    }
+
+    
+    </script>
+</head>
+<body>
+    <p id="demos">JavaScript can change HTML content.</p>
+    <button type="button" onclick="document.getElementById('demos').innerHTML = 'Hello JavaScript!'">Change Content</button>
+
+    <p id="idemo">A Paragraph</p>
+    <button type="button" onclick="myFunction()">Change Para</button>
+    <br><br>
+    <button onclick="msg();">External Hi</button>
+    
+    <h2>What Can JavaScript Do?</h2>
+
+    <p>JavaScript can change HTML attribute values.</p>
+
+    <p>In this case JavaScript changes the value of the src (source) attribute of an image.</p>
+
+    <button onclick="document.getElementById('myImage').src='bulbon.png'">Turn on the light</button>
+
+    <img id="myImage" src="bulboff.png" style="width:100px">
+
+    <button onclick="document.getElementById('myImage').src='bulboff.png'">Turn off the light</button>
+
+    <br>
+    <p id="demo1">JavaScript can change the style of an HTML element.</p>
+
+    <button type="button" onclick="document.getElementById('demo1').style.fontSize='35px'">Change Style</button>
+    <br><br>
+
+    <p id="demo2">JavaScript can hide HTML elements.</p>
+
+    <button type="button" onclick="document.getElementById('demo2').style.display='none'">Hide Elements</button>
+    <br><br>
+    
+    <p id="demo3" style="display:none">Hello JavaScript!</p>
+
+    <button type="button" onclick="document.getElementById('demo3').style.display='block'">Display the hidden content</button>
+    <br><br>
+    <input type="button" id="toggler" value="Toggler" onClick="action();" />
+    <input type="button" id="togglee" value="Togglee" />
+    <br><br>
+    <input type="button" id="hideButton" value="Hide Button" onClick="actionHide();" />
+    <br><br>
+
+    <p id="paraFromScript"></p>
+
+    <script>
+        document.getElementById("paraFromScript").innerHTML = "My First JavaScript";
+    </script>
+
+    <h2>JavaScript Statements</h2>
+
+    <p>A <b>JavaScript program</b> is a list of <b>statements</b> to be executed by a computer.</p>
+
+    <p id="add"></p>
+
+    <script>
+    let x, y, z;  // Statement 1
+    x = 5;        // Statement 2
+    y = 6;        // Statement 3
+    z = x + y;    // Statement 4
+
+    document.getElementById("add").innerHTML =
+    "The value of z is " + z + ".";  
+    </script>
+
+    <h2>JavaScript Strings</h2>
+
+    <p>Strings can be written with double or single quotes.</p>
+
+    <p id="stringSingle"></p>
+    <p id="stringDouble"></p>
+
+    <script>
+    document.getElementById("stringSingle").innerHTML = 'John Doe';
+    document.getElementById("stringDouble").innerHTML = "John Soe";
+    </script>
+
+    <h1>JavaScript Values</h1>
+    <p>The JavaScript syntax defines two types of values:</p>
+    <ol>
+    <li>Fixed values - Literals.</li>
+    <li>Variable values - Variables.</li>
+    </ol>
+    <h2>The <b>let</b> Keyword Creates Variables</h2>
+
+    <p id="let"></p>
+
+    <script>
+    let a, b;
+    a = 5 + 6;
+    b = x * 10;
+    document.getElementById("let").innerHTML = b;
+    </script>
+    
+    <h2>The var Keyword Creates Variables</h2>
+
+    <p id="var"></p>
+
+    <script>
+    var c, d;
+    c = 5 + 6;
+    d = x * 10;
+    document.getElementById("var").innerHTML = d;
+    </script>
+
+    <h2>JavaScript Single line & MultiLine Comments are NOT Executed</h2>
+
+    <p id="demo"></p>
+
+    <script>
+   // let x;
+   //x = 5;
+    /*x = 6; I will not be executed
+    document.getElementById("demo").innerHTML = x;*/
+    </script>
+
+    <h2>JavaScript is Case Sensitive</h2>
+
+    <p>Try to change lastName to lastname.</p>
+
+    <p id="variableSCase"></p>
+    <p id="variableCCase"></p>
+    <script>
+    let lastname, lastName;
+    lastName = "Doe";
+    lastname = "Peterson";
+    document.getElementById("variableCCase").innerHTML = lastName;
+    document.getElementById("variableSCase").innerHTML = lastname;
+    </script>
+
+    <h1>JavaScript uses the Unicode character set.</h1>
+    <p>UTF-8	A character in UTF8 can be from 1 to 4 bytes long. UTF-8 can represent any character in the Unicode standard. UTF-8 is backwards compatible with ASCII. UTF-8 is the preferred encoding for e-mail and web pages</p>
+    <p>UTF-16	16-bit Unicode Transformation Format is a variable-length character encoding for Unicode, capable of encoding the entire Unicode repertoire. UTF-16 is used in major operating systems and environments, like Microsoft Windows, Java and .NET.</p>
+
+    
+   <img src="images\arithmetic.PNG" width="60%" alt="">
+
+   
+    <img src="images\Assignment.PNG" width="60%" alt=""><br>
+   
+    <img src="images\comparision.PNG" width="60%" alt=""><br>
+
+<h1>JavaScript Type Operators</h1>
+<p>
+typeof______	Returns the type of a variable <br>
+instanceof_____Returns true if an object is an instance of an object type <br>
+<br>
+
+Converting Strings to Numbers <br>
+Converting Numbers to Strings <br>
+Converting Dates to Numbers <br>
+Converting Numbers to Dates <br>
+Converting Booleans to Numbers <br>
+Converting Numbers to Booleans <br>
+
+</p>
+
+<img src="images\bitwise.png" width="75%" alt="">
+
+<p id="quotes"></p>
+<script>
+let answer1 = "It's alright";             // Single quote inside double quotes
+let answer2 = "He is called 'Johnny'";    // Single quotes inside double quotes
+let answer3 = 'He is called "Johnny"';
+document.getElementById("quotes").innerHTML =
+answer1 + "<br>" + 
+answer2 + "<br>" + 
+answer3;
+</script>
+
+<h2>JavaScript Arrays</h2>
+
+<p>Array indexes are zero-based, which means the first item is [0].</p>
+
+<p id="arrays"></p>
+
+<script>
+const cars = ["Saab","Volvo","BMW"];
+
+document.getElementById("arrays").innerHTML = cars[0]+"<br>"+cars[1]+"<br>"+cars[2];
+</script>
+<h2>JavaScript Objects</h2>
+
+<p id="object"></p>
+
+<script>
+const person = {
+  firstName : "John",
+  lastName  : "Doe",
+  age     : 50,
+  eyeColor  : "blue"
+};
+
+document.getElementById("object").innerHTML =
+person.firstName +"  "+person.lastName + " is " + person["age"] + " years old whose eye color is "+ person.eyeColor;
+</script>
+
+<h2>JavaScript typeof</h2>
+<p>The typeof operator returns the type of a variable or an expression.</p>
+
+<p id="types"></p>
+
+<script>
+var m = 3.23;
+var i = "";
+var j;
+var k=2;
+var l=true;
+
+document.getElementById("types").innerHTML = 
+typeof m + "<br>" +
+typeof i + "<br>" +
+typeof j + "<br>" +
+typeof k + "<br>" +
+typeof l;
+
+</script>
+
+<h2>JavaScript Functions</h2>
+
+<p>This example calls a function which performs a calculation, and returns the result:</p>
+
+<button onClick="Multiply(5,7);">Multiply</button>
+<p id="mulans"></p>
+
+
+<h1>Sum of 2 numbers using Form inputs</h1>
+<p>First Number: <input id="firstnumber"></p>
+<p>Second Number: <input id="secondnumber"></p>
+<button onclick="add()">Add Them</button>
+<p>Sum = <input id="answer"></p>
+
+<h1>Give inputs one by one to get sum</h1>
+    <p id="blockOne"> First Number <input id="firstNumber">
+    <button onclick="FirstNum()">Enter</button></p>
+    <p id="blockTwo" style="display:none;">Second Number <input id="secondNumber">
+    <button onclick="SecondNum()">Add</button></p>
+    <p id="blockThree" style="display:none;">Sum = <span id="res"></span></p>
+
+    <h2>JavaScript Objects</h2>
+    <p>An object method is a function definition, stored as a property value.</p>
+    
+    <p id="details"></p>
+    
+    <script>
+    // Create an object:
+    const Detail = {
+      firstName: "Naga",
+      lastName: "Lakshmi",
+      id: 1234,
+      fullName: function() {
+        return this.firstName + " " + this.lastName;
+      }
+    };
+    
+    // Display data from the object:
+    document.getElementById("details").innerHTML = Detail.fullName();
+    </script>
+
+    <h1>The Element Object</h1>
+    <h2>The focus() and blur() Methods</h2>
+
+    <input type="text" id="myText" value="A text field">
+
+    <p>Click the buttons to give or remove focus from the text field.</p>
+
+    <button type="button" onclick="getFocus()">Get focus</button>
+    <button type="button" onclick="loseFocus()">Lose focus</button>
+
+    <script>
+    function getFocus() {
+    document.getElementById("myText").focus();
+    }
+
+    function loseFocus() {
+    document.getElementById("myText").blur();
+    }
+    </script><br><br>
+
+    <img src="images\events.PNG" alt=""><br>
+    <button onclick="document.getElementById('time').innerHTML=Date()">The time is?</button>
+    <button onclick="this.innerHTML=Date()">The time is?</button>
+    <p id="time"></p>
+    
+    <button onclick="displayDate()">The time is?</button>
+
+    <script>
+    function displayDate() {
+    document.getElementById("dates").innerHTML = Date();
+    }
+    </script>
+    <p id="dates"></p>
+
+    <h1>Strings</h1>
+    <p id="text1"></p>
+    <p id="text2"></p>
+    <p id="text3"></p>
+    <p id="text4"></p>
+    <p id="text5"></p>
+    <p id="text6"></p>
+    <p id="text7"></p>
+    <p id="text8"></p>
+    <p id="text9"></p>
+    <p id="text10"></p>
+    <p id="text11"></p>
+    <p id="text12"></p>
+    <p id="text13"></p>
+    <p id="text14"></p>
+    <p id="text15"></p>
+    <p id="text16"></p>
+    <p id="text17"></p>
+    <p id="text18"></p>
+    <p id="text19"></p>
+    <p id="text20"></p>
+    <p id="text21"></p>
+    <p id="text22"></p>
+    <p id="text23"></p>
+    <p id="text24"></p>
+    <p id="text25"></p>
+    <p id="text26"></p>
+    <p id="text27"></p>
+    <p id="text28"></p>
+    <p id="text29"></p>
+    <p id="text30"></p>
+    <p id="text31"></p>
+    <p id="text32"></p>
+    <p id="text33"></p>
+    <p id="text34"></p>
+    <p id="text35"></p>
+    <p id="text36"></p>
+    <p id="text37"></p>
+    <script>
+    let text1 = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+    document.getElementById("text1").innerHTML = text1.length;//Starts from 1
+    let text2 = "We are the so-called \"Vikings\" from the north.";
+    document.getElementById("text2").innerHTML = text2; 
+    let text3 = 'It\'s alright.';    
+    document.getElementById("text3").innerHTML = text3;
+    let text4 = "The character \\ is called backslash.";
+    document.getElementById("text4").innerHTML = text4;
+    document.getElementById("text5").innerHTML = "Hello \
+    Dolly!";
+    document.getElementById("text6").innerHTML = "Hello " +
+    "Dolly!";
+   // ab is a string
+     ab = "John";
+
+    // ac is an object
+    let ac = new String("John");
+
+    document.getElementById("text7").innerHTML =
+    typeof x + "<br>" + typeof y;
+
+    let ad = "John";        // x is a string
+    let ae = new String("John");  // y is an object
+    let af = new String("John");
+    document.getElementById("text7").innerHTML = (ad==ae);
+    document.getElementById("text8").innerHTML = (ad===ae);
+    document.getElementById("text9").innerHTML = (af==ae);
+    document.getElementById("text10").innerHTML = (af===ae);
+
+    let str1 = "Apple, Banana, Kiwi";
+    let part = str1.slice(7, 13); //Starts from 0
+    document.getElementById("text11").innerHTML = part;
+    document.getElementById("text12").innerHTML = str1.slice(7);
+    document.getElementById("text13").innerHTML = str1.slice(7,13);
+    document.getElementById("text14").innerHTML = str1.slice(-12,-6);
+    document.getElementById("text15").innerHTML = str1.slice(-12);
+    document.getElementById("text16").innerHTML = str1.substr(7,13);
+    document.getElementById("text17").innerHTML = str1.substr(7);
+    document.getElementById("text18").innerHTML = str1.substr(-4);
+    document.getElementById("text19").innerHTML = str1.substring(7,13);
+    let newText = str1.replace("Banana", "ITVedant");
+    document.getElementById("text20").innerHTML = newText;
+    let text = "Please visit Microsoft and Microsoft!";
+    let nText = text.replace("Microsoft", "W3Schools");
+    document.getElementById("text21").innerHTML = nText;
+    let texts = "Please visit ItVedant and ItVedant!"; 
+    let nwText = texts.replace(/ItVedant/g, "Chennai");
+    document.getElementById("text22").innerHTML = nwText;
+    let aa = nwText.toUpperCase();
+    document.getElementById("text23").innerHTML = aa;
+    let bb = nwText.toLowerCase();
+    document.getElementById("text24").innerHTML = bb;
+    let t1 = "Hello";
+    let t2 = "World";
+    let t3 = t1.concat(" ", t2);
+    document.getElementById("text25").innerHTML = t3;
+    let t4 = "      Hello World!      ";
+    let t5 = t4.trim();
+    document.getElementById("text26").innerHTML = t5;
+    let t6 = 5;
+    let t7 = t6.toString();
+    let padded = t7.padStart(4,"0");
+    let padded2 = t7.padEnd(6,"d");
+    document.getElementById("text27").innerHTML = padded;
+    document.getElementById("text28").innerHTML = padded2;
+    t8="Hi From India";
+    let char1 = t8.charAt(0);
+    let char2 = t8.charCodeAt(0);
+    let char3 = t8[0];
+    document.getElementById("text29").innerHTML = char1;
+    document.getElementById("text30").innerHTML = char2;
+    document.getElementById("text31").innerHTML = char3;
+    let t9 = "a,b,c,d,e,f,e";
+    const myArray = t9.split(",");
+    document.getElementById("text32").innerHTML = myArray[0];
+    document.getElementById("text33").innerHTML = t9.indexOf("e"); 
+    document.getElementById("text34").innerHTML = t9.lastIndexOf("e");
+    document.getElementById("text35").innerHTML = t9.indexOf("z"); 
+    document.getElementById("text36").innerHTML = t9.lastIndexOf("z");
+    document.getElementById("text37").innerHTML = t9.search("b");
+    </script>
+
+
+</body>
+</html>
